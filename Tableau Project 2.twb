@@ -7,8 +7,8 @@
   <datasources>
     <datasource hasconnection='false' inline='true' name='Parameters' version='8.3'>
       <aliases enabled='yes' />
-      <column caption='Nth' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2'>
-        <calculation class='tableau' formula='2' />
+      <column caption='Nth' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='3'>
+        <calculation class='tableau' formula='3' />
         <range granularity='1' max='5' min='0' />
       </column>
     </datasource>
@@ -158,7 +158,7 @@
         <calculation class='tableau' formula='COUNT([CRIME_TYPE])' scope-isolation='false' />
       </column>
       <column caption='Crime of the Day' datatype='string' name='[Calculation_4810409173127585]' role='measure' type='nominal'>
-        <calculation class='tableau' formula='LOOKUP(attr([CRIME_TYPE]),FIRST() + [Parameters].[Parameter 1])' scope-isolation='false'>
+        <calculation class='tableau' formula='LOOKUP(attr([CRIME_TYPE]),FIRST() + [Parameters].[Parameter 1]-1)' scope-isolation='false'>
           <table-calc ordering-type='Rows' />
         </calculation>
       </column>
@@ -190,8 +190,8 @@
         <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
       </semantic-values>
       <datasource-dependencies datasource='Parameters'>
-        <column caption='Nth' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='2'>
-          <calculation class='tableau' formula='2' />
+        <column caption='Nth' datatype='integer' name='[Parameter 1]' param-domain-type='range' role='measure' type='quantitative' value='3'>
+          <calculation class='tableau' formula='3' />
           <range granularity='1' max='5' min='0' />
         </column>
       </datasource-dependencies>
@@ -414,7 +414,7 @@
             <column caption='Crime Type' datatype='string' name='[CRIME_TYPE]' role='dimension' type='nominal'>
             </column>
             <column caption='Crime of the Day' datatype='string' name='[Calculation_4810409173127585]' role='measure' type='nominal'>
-              <calculation class='tableau' formula='LOOKUP(attr([CRIME_TYPE]),FIRST() + [Parameters].[Parameter 1])' scope-isolation='false'>
+              <calculation class='tableau' formula='LOOKUP(attr([CRIME_TYPE]),FIRST() + [Parameters].[Parameter 1]-1)' scope-isolation='false'>
                 <table-calc ordering-type='Rows' />
               </calculation>
             </column>
@@ -497,7 +497,7 @@
         </color-one-way>
       </highlight>
     </window>
-    <window auto-hidden='0' class='worksheet' maximized='0' name='nth - crime of the day'>
+    <window auto-hidden='0' class='worksheet' maximized='1' name='nth - crime of the day'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -529,7 +529,7 @@
         </color-one-way>
       </highlight>
     </window>
-    <window auto-hidden='0' class='worksheet' maximized='1' name='cume dist-'>
+    <window auto-hidden='0' class='worksheet' maximized='0' name='cume dist-'>
       <cards>
         <edge name='left'>
           <strip size='160'>
