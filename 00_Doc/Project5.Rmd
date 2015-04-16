@@ -1,0 +1,30 @@
+---
+title: "Dunning-Stancik DV_RProject5"
+output: html_document
+---
+
+
+###Project 5 - Crosstabs
+
+Link to repo:
+<https://github.com/sarstanc/DV_TableauProject2>
+
+###RANK - Popular crime ranked by most frequently occuring
+```{r, warning=FALSE}
+source("../01_SQL_Crosstabs/rank.R", echo=TRUE)
+```
+
+###DIFFERENCE - Duration of peace aka time between crimes committed
+```{r, warning=FALSE}
+source("../01_SQL_Crosstabs/difference.R", echo=TRUE)
+```
+
+###NTH - Third crime committed on each day
+```{r, warning=FALSE}
+source("../01_SQL_Crosstabs/nth.R", echo=TRUE)
+```
+
+###CUME_DIST - Percent of crime type compared to total of crimes
+```{r, warning=FALSE}
+source("../01_SQL_Crosstabs/cume_dist.R", echo=TRUE)
+```
