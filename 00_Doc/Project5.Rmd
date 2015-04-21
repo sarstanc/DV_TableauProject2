@@ -1,3 +1,4 @@
+
 ---
 title: "Dunning-Stancik DV_RProject5"
 output: html_document
@@ -9,9 +10,16 @@ output: html_document
 Link to repo:
 <https://github.com/sarstanc/DV_TableauProject2>
 
+```{r}
+library("rjson")
+library("RCurl")
+require(tidyr)
+require(dplyr) 
+```
+
 ###RANK - Popular crime ranked by most frequently occuring
 ```{r, warning=FALSE}
-source("../01_SQL_Crosstabs/rank.R", echo=TRUE)
+source("../01_SQL_Crosstabs/rank.R")
 ```
 
 ###DIFFERENCE - Duration of peace aka time between crimes committed
